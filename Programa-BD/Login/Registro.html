@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-reg">
+            <h5>REGISTRO</h5>
+            <input class="resp" type="text" id="nombre" value="" placeholder="Nombre">
+            <input class="resp" type="email" id="email" value="" placeholder="Correo Electronico">
+            <input class="resp" type="text" id="usuario" value="" placeholder="Usuario">
+            <input class="resp" type="password" id="password" placeholder="Contraseña">
+            <input class="resp" type="password" id="confirmPassword" placeholder="Confirmar contraseña">
+            
+            <input class="buttons" type="button"  value="Register" onclick="ValidateForm()">
+        </div>
+    </div>
+</body>
+<script>
+    function ValidateForm(){
+        const password= document.getElementById('password').value;
+        const confirmPassword= document.getElementById('confirmPassword').value;
+
+        if(password !== confirmPassword){
+            alert("Las contraseñas no coinciden. Intentalo de nuevo.");
+
+        }else{
+            alert("Registro exitoso.");
+            
+            windows.location.href='login.html';
+        }
+    }
+    
+    </script>
+</html>

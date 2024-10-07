@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    
+    padding: 50px;
+    font-family: ubuntu;
+    background-color: #AEDFE7;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    
+}
+
+.container {
+    
+    display: flex; 
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    max-width: 1000px;
+    
+}
+.form-login {
+    border: 5px solid #a4afb3;
+    width: 500px;
+    height: 340px;
+    background: #87a1ab;
+    box-shadow: 15px 20px 47px #87a1ab;
+    padding: 20px 30px;
+    color: white;
+}
+
+.form-login h5 {
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+}
+.form-login a {
+    display: block;
+    text-align: center; 
+    padding: 5px 0; 
+    font-size: 13px;
+    color: white;
+    text-decoration: none; 
+}
+
+.form-login a:hover {
+    text-decoration: underline; 
+}
+
+
+.form-reg {
+    
+    border: 5px solid #a4afb3;
+    width: 500px;
+    height: 450px;
+    background: #87a1ab;
+    box-shadow: 15px 20px 47px #87a1ab;
+    padding: 30px;
+    color: white;
+}
+
+.form-reg h5 {
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.form-reg a {
+    padding: 9vh;
+    font-size: 13px;
+    color: white;
+}
+
+.resp {
+    
+    width: 100%;
+    border: none;
+    margin-bottom: 5px;
+    padding: 11px 10px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: block;
+    width: 80%;
+    height: 40px;
+    background: #AEDFE7;
+    border: 2px solid white;
+    color: white;
+    margin: 16px auto; 
+    transition: background-color 0.3s;
+}
+
+.buttons:hover {
+    background-color: #D3D3D3;
+    cursor: pointer;
+}
+
+.imagen {
+    width: 500px; 
+    height: auto;
+    margin-right: 20px; 
+}
