@@ -1,15 +1,15 @@
 from flask import Flask, render_templates, request, jsonify
 import datetime
-from flask_sqlalchemy import SQLAlchemy
+from flask_SQLAlchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from sqlalchemy import Enum
 
 
 app = Flask (__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/CodeUp'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:127.0.0.1/CodeUp'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db= SQLAlchemy (app)
-Bcrypt = Bcrypt (app)
+bcrypt = Bcrypt (app)
 
 class Usuarios(db.Model):
     id_usuario=db.Column(db.Integer, primary_key=True)
