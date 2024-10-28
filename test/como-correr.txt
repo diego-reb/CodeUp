@@ -1,0 +1,29 @@
+Probado en macOS check
+Probado en Windows ??
+
+Probar primero :
+source venv/bin/activate
+flask run
+Si no 
+python3 -m venv venv
+source venv/bin/activate
+pip install Flask python-dotenv
+export FLASK_APP=main
+echo $FLASK_APP
+flask run
+Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+
+
+
+# Activar el entorno virtual
+source venv/bin/activate
+
+# Instalar Flask-WTF
+pip install Flask-WTF
+
+# (Opcional) Verificar que Flask-WTF esté instalado
+pip show Flask-WTF
+
+# Ejecutar la aplicación Flask
+flask run

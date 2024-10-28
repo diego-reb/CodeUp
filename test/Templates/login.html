@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="Img/Sourse.png" alt="" class="imagen">
+        <div class="form-login">
+            <h5>LOGIN</h5>
+            
+            <input class="resp" type="text" id="Usuario" placeholder="User Name">
+            <input class="resp" type="password" id="password" placeholder="Password">
+            
+            <P><a href="#">Forget your Password?</a>
+            <a href="/Templates/Registro.html">I do not have an account</a></p>
+            
+            <input class="buttons" type="button" value="SIGN IN" onclick="login()">
+        </div>
+    </div>
+
+    <script>
+       
+
+        function login() {
+            
+            const username = document.getElementById('Usuario').value;
+            const password = document.getElementById('password').value;
+
+            
+            const user = users.find(user => user.username === username && user.password === password);
+
+            
+            if (user) {
+                alert("Inicio de sesión exitoso.");
+                
+                window.location.href = "presentacion.html"  
+            } else {
+                alert("Usuario o contraseña incorrectos.");
+            }
+        }
+    </script>
+</body>
+</html>
