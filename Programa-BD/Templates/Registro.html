@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="Stylesheet" href="/Templates/style.css">
+    <link rel="Stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <img src="Img/Sourse.png" alt="" class="imagen">
-        <div class="form-reg">
-            <h5>REGISTRO</h5>
-            <input class="resp" type="text" id="name" value="" placeholder="Nombre">
-            <input class="resp" type="email" id="email" value="" placeholder="Correo Electronico">
-            <input class="resp" type="text" id="usuario" value="" placeholder="Usuario">
-            <input class="resp" type="password" id="password" placeholder="Contraseña">
-            <input class="resp" type="password" id="confirmPassword" placeholder="Confirmar contraseña">
-            
-            <input class="buttons" type="submit"  value="Registrar" >
-        </div>
-    </div>
+<body>   
+    <h5>REGISTRO</h5> 
+    <form id="registroForm" action="/login/" method="POST">
+        <input class="resp" type="text" id="name" name="name" placeholder="Nombre">
+        <input class="resp" type="email" id="email" name="email" placeholder="Correo Electrónico">
+        <input class="resp" type="text" id="usuario" name="usuario" placeholder="Usuario">
+        <input class="resp" type="password" id="password" name="password" placeholder="Contraseña">
+        <input class="resp" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar contraseña">
+        <input class="buttons" type="submit" value="Registrar">
+    </form>
+    
 </body>
 
 </html>
