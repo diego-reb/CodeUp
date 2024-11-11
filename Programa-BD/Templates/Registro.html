@@ -8,13 +8,13 @@
 </head>
 <body>   
     <h5>REGISTRO</h5> 
-    <form id="registroForm" action="/login/" method="POST">
-        <input class="resp" type="text" id="name" name="name" placeholder="Nombre">
-        <input class="resp" type="email" id="email" name="email" placeholder="Correo Electrónico">
+    <form id="registroForm" action="/submit" method="POST">
+        <input class="resp" type="text" id="name" name="nombre_usuario" placeholder="Nombre">
+        <input class="resp" type="email" id="email" name="correo_usuario" placeholder="Correo Electrónico">
         <input class="resp" type="text" id="usuario" name="usuario" placeholder="Usuario">
-        <input class="resp" type="password" id="password" name="password" placeholder="Contraseña">
+        <input class="resp" type="password" id="password" name="contraseña_usuario" placeholder="Contraseña">
         <input class="resp" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar contraseña">
-        <input class="buttons" type="submit" value="Registrar">
+        <button type="submit">Registrar</button>
     </form>
     <script src="Registro.js"></script>
 </body>

@@ -4,12 +4,6 @@ CREATE TABLE Países (
     nombre_pais VARCHAR(100) NOT NULL
 );
 
-INSERT INTO Países (id_pais, nombre_pais) VALUES
-(1, 'Mexico'),
-(2,'Estados Unidos'),
-(3, 'Reino Unido')
-
-SELECT * FROM Usuario
 -- Tabla Dirección
 CREATE TABLE Dirección (
     id_direccion SERIAL PRIMARY KEY,
@@ -31,13 +25,19 @@ CREATE TABLE Tipo_de_usuario (
 CREATE TABLE Usuario (
     id_usuario SERIAL PRIMARY KEY,
     nombre_usuario VARCHAR(50) NOT NULL,
-    apellido_usuario VARCHAR(50) NOT NULL,
+    apellido_usuario VARCHAR(50) ,
     correo_usuario VARCHAR(100) UNIQUE NOT NULL,
     telefono_usuario VARCHAR(15),
     contraseña_usuario VARCHAR(100) NOT NULL,
     id_direccion INT REFERENCES Dirección(id_direccion),
     id_tipo_de_usuario INT REFERENCES Tipo_de_usuario(id_tipo_de_usuario)
 );
+DROP TABLE Usuario;
+DROP TABLE Pago;
+DROP TABLE Evaluaciones
+
+
+SELECT * FROM Usuario
 
 -- Tabla Método de Pago
 CREATE TABLE Metodo_de_pago (

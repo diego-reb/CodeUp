@@ -1,9 +1,35 @@
 from flask import Flask
 from flask import render_template, request, redirect, url_for
+import psycopg2
 from Registro import Registro
 from Registro import login
 
+
 app = Flask(__name__)
+
+conn = psycopg2.connect(
+    dbname="CodeUp",
+    user="postgres",
+    password="postgresql",
+    host="localhost",
+    port="5432"
+)
+
+@app.route('/submit', methods=['POST'])
+def submit_data():
+   nombre_usuario = request.form.get('nombre_usuario')
+   contraseña_usuario=request.form.get('contraseña_usuario')
+   correo_usuario=request.form.get('correo_usuario')
+   print(nombre_usuario, contraseña_usuario, correo_usuario, )  
+   cur = conn.cursor()
+   cur.execute(
+    "INSERT INTO Usuario (nombre_usuario, contraseña_usuario, correo_usuario) VALUES (%s, %s, %s)",
+    (nombre_usuario, contraseña_usuario, correo_usuario,)
+)
+   conn.commit()
+   cur.close()
+   return "Datos guardados exitosamente."
+
 app.secret_key = 'tu_clave_es_tuya'
 @app.route("/")
 def hello():
@@ -42,3 +68,6 @@ def login1():
          return redirect(next)
       return redirect (url_for('hello'))
    return render_template("login.html", form=form)
+
+if __name__ == '__main__':
+    app.run(debug=True)
