@@ -25,9 +25,9 @@ CREATE TABLE Tipo_de_usuario (
 CREATE TABLE Usuario (
     id_usuario SERIAL PRIMARY KEY,
     nombre_usuario VARCHAR(50) NOT NULL,
-    apellido_usuario VARCHAR(50) ,
+    apellido_usuario VARCHAR(50),
     correo_usuario VARCHAR(100) UNIQUE NOT NULL,
-    telefono_usuario VARCHAR(15),
+    usuario VARCHAR(15),
     contraseña_usuario VARCHAR(100) NOT NULL,
     id_direccion INT REFERENCES Dirección(id_direccion),
     id_tipo_de_usuario INT REFERENCES Tipo_de_usuario(id_tipo_de_usuario)

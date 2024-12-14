@@ -7,13 +7,7 @@ from Registro import login
 
 app = Flask(__name__)
 
-conn = psycopg2.connect(
-    dbname="CodeUp",
-    user="postgres",
-    password="postgresql",
-    host="localhost",
-    port="5432"
-)
+
 
 @app.route('/submit', methods=['POST'])
 def submit_data():
@@ -24,7 +18,7 @@ def submit_data():
    cur = conn.cursor()
    cur.execute(
     "INSERT INTO Usuario (nombre_usuario, contraseña_usuario, correo_usuario) VALUES (%s, %s, %s)",
-    (nombre_usuario, contraseña_usuario, correo_usuario,)
+    (nombre_usuario, contraseña_usuario, correo_usuario)
 )
    conn.commit()
    cur.close()
